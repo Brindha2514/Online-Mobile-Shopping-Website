@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<a href="D:\SMZ\index.html" class="close"></a>
+		<h1 class="label">User Login</h1>
+		<form class="login_form" action="D:\SMZ\index.html" method="post" name="form" onsubmit="return validated()">
+			<div class="font">Email or Phone</div>
+			<input autocomplete="off" type="text" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required>
+			<div id="email_error">Please fill up your Email or Phone</div>
+			<div class="font font2">Password</div>
+		   <input type="password" class="input" id="password" name="password" placeholder="Enter your password min 8 characters"
+            autocomplete="off" onkeyup='check()' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            maxlength="100" minlength="8" required>
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Login</button>
+			<center><a href="D:\SMZ\REGISTER\register.html">Signup</a></center>
+		</form>
+	</div>	
+	<script src="valid.js"></script>
+</body>
+</html>
